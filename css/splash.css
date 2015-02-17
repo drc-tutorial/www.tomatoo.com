@@ -1,0 +1,49 @@
+@-webkit-keyframes blur{
+    0%{
+        text-shadow: #fff 0 0 60px;
+        transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
+        color: hsla(0,0%,0%,0);
+    }
+}
+
+@-webkit-keyframes splash{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    background-image: url(../assets/images/welcome.png);
+    color: white;
+    z-index: 1;
+
+    -webkit-animation: splash 2s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.splash h1{
+    font-size: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -149.5px;
+    margin-left: -606.5px;
+
+    text-shadow: #fff 0 0 5px;
+    transition: text-shadow 1s cubic-bezier(0, 0.75, 0, 1);
+
+    -webkit-animation: blur 3s;
+}
